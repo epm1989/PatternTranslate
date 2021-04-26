@@ -8,8 +8,10 @@ if __name__ == '__main__':
                     "Example:\n\n" \
                     '\tcat input.txt| python main.py "foo %{0} is a %{1} the is %{2S2} in or %{3G} foo" > output.txt\n'
         exit(msg_error)
+
     f = open("output.txt", 'w')
     f.close()
+
     lines = []
     for line in sys.stdin:
         lines.append(line.replace('\n', ''))
